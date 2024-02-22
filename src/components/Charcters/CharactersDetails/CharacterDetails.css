@@ -1,0 +1,107 @@
+.main-character-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.main-character-details__go-back {
+  position: absolute;
+  left: 0;
+  top: 42px;
+}
+
+.main-character-details__avatar-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.main-character-details__avatar {
+  border-radius: 50%;
+  box-shadow: 0px 5px 5px 0px gray;
+}
+
+.main-character-details__avatar-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  margin-top: 20px;
+  color: #081f32;
+}
+
+/* -------------informaitions-container------------- */
+
+.main-character-details__informaition-container {
+  display: flex;
+  justify-content: space-between;
+  width: 838px;
+}
+
+/* ------------informations-------------- */
+
+.main-character-details__informaitions {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.main-character-details__informaition-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: #8e8e93;
+}
+
+.main-character-details__informaition-cart {
+  display: flex;
+  flex-direction: column;
+  width: 397px;
+  margin-left: 15px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #6e798c;
+}
+
+.main-character-details__informaition-cart-request {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #081f32;
+}
+
+.main-character-details__informaition-cart-response {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6e798c;
+}
+
+/* ----------episodes------------ */
+
+.main-character-details__episodes{
+  width: 100%;
+}
+
+.main-character-details__episodes-title{
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: #8e8e93;
+}
+
+.main-character-details__episodes-cart{
+
+}
+
+.main-character-details__episodes-cart-request{
+
+}
+
+.main-character-details__episodes-cart-response{
+
+}

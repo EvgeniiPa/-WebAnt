@@ -1,0 +1,42 @@
+.header{
+  
+    border-bottom: 1px solid gray;
+  }
+  
+  .header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  
+  .header__navigation-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 302px;
+  }
+  
+  .header__nav-item{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color:black;
+    text-decoration: none;
+  }
+
+  .active{
+    color: green;
+  }
+
+  /* -----------footer---------- */
+
+  .footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-top: 2px solid #dbd7d7;
+    margin-top: 36px;
+  }

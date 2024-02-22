@@ -1,0 +1,19 @@
+.slects__serch-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 62px;
+}
+  
+.slects__serch{
+    display: flex;
+    width: 240px;
+    height: 56px;
+    border-radius: 5px;
+}
+
+.slects__option {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

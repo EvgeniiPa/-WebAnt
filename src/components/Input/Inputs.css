@@ -1,0 +1,23 @@
+.input__wrapper{
+    display: flex;
+    width: 240px;
+    height: 56px;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+.input__img{
+    width:24px;
+    margin-right: -24px;
+    z-index: 2;
+}
+
+.input__serch{
+    width: 100%;
+    padding-left: 40px;  
+    border: none;
+}
+
+.input__serch:focus{
+    border: none;
+}
