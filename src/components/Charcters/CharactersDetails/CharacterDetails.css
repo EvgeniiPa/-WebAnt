@@ -94,14 +94,14 @@
   color: #8e8e93;
 }
 
-.main-character-details__episodes-cart{
+@media(min-width: 800px) and (max-width: 1000px){
+  .main-character-details__informaitions{
+    width: 300px;
+  }
 
-}
 
-.main-character-details__episodes-cart-request{
-
-}
-
-.main-character-details__episodes-cart-response{
-
+  
+  .main-character-details__episodes{
+     width: 300px;
+  }
 }

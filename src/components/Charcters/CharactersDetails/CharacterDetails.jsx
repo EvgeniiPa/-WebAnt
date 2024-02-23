@@ -25,7 +25,9 @@ export default function CharactersDetails() {
   function reloadPage(){
     axios
     .get("https://rickandmortyapi.com/api/character")
-    .then(res => setCharacterList(res.data.results))
+    .then(res =>{ 
+      setCharacterList(res.data.results)
+    })
     .catch(error => console.error(error))
 }
 
@@ -37,27 +39,16 @@ export default function CharactersDetails() {
   function loadEpisodes(urls){
     urls.forEach((url)=>{
        axios
-        .get(url).then(res => {
-            setEpisodes(itm =>[...itm, res.data])
-        })
+        .get(url).then(res => setEpisodes(itm =>[...itm, res.data]))
     })
   }
 
 
-  useEffect(()=>{
-    if(episodes.legth === 0){
-      loadEpisodes(character.episode.slice(0, 4))
-    }else{
-      console.log(episodes)
-    }
-  }, [])
- 
-
-  
-
- 
-
-  useEffect(() => { if (character === undefined)loadCharacter(id)}, [character, isLoading, loadCharacter]);
+  useEffect(() => { 
+    if (character === undefined){
+         loadCharacter(id)
+   }
+  }, [character, isLoading, loadCharacter]);
 
   if (isLoading) {
     return <>loadin...</>;
@@ -140,8 +131,8 @@ export default function CharactersDetails() {
           </div>
           <div className="main-character-details__episodes">
             <h4 className="main-character-details__episodes-title">Episodes</h4>
-                {episodes.map((item, index) =>{
-                return  <CharactersDetailsEpisodes key={index} name={episodes.name} episode={episodes.episode} airDate={episodes.air_date} />
+                {episodes && episodes.map((item, index) =>{
+                return  <CharactersDetailsEpisodes key={index} name={item.name} episode={item.episode} airDate={item.air_date} />
                  })}
            </div>
         </div>

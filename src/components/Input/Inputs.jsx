@@ -8,17 +8,30 @@ import { MyContext } from "../Context/Context";
 
 export default function Iinputs({type}) {
   const [searchText, setSearchText] = useState("");
-  const { setCharacterList } = useContext(MyContext);
+  const { setCharacterList, setLocationList, setEpisodesList } = useContext(MyContext);
 
   function handlerSearch(){
+    if(type === 'character'){
       axios
+      .get(`https://rickandmortyapi.com/api/${type}/?name=${searchText}&status=alive`)
+      .then(res => setCharacterList(res.data.results))
+      .catch(error => console.error(error))
+    }else if( type === 'location'){
+        axios
         .get(`https://rickandmortyapi.com/api/${type}/?name=${searchText}&status=alive`)
-        .then(res => setCharacterList([...res.data.results]))
+        .then(res => setLocationList(res.data.results))
         .catch(error => console.error(error))
+    }else if(type === 'episode'){
+        axios
+        .get(`https://rickandmortyapi.com/api/${type}/?name=${searchText}&status=alive`)
+        .then(res => setEpisodesList(res.data.results))
+        .catch(error => console.error(error))
+    }
   }
 
   function handlerInput(e){
     setSearchText(e.target.value)
+    
     console.log(searchText, type)
   }
   

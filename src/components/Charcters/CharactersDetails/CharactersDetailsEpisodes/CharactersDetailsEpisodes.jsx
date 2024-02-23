@@ -1,9 +1,6 @@
-import { useContext, useEffect } from "react"
-import { MyContext } from "../../../Context/Context"
-import axios from "axios"
+import "./CharactersDetailsEpisodes.css"
 
 export default function CharactersDetailsEpisodes({name, episode, airDate}){
-
 
     return(
         <>

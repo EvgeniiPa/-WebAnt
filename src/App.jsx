@@ -7,6 +7,7 @@ import Episodes from "./components/Episodes/Episodes";
 import Locations from "./components/Locations/Locations";
 import CharactersDetails from "./components/Charcters/CharactersDetails/CharacterDetails";
 import LocationDetails from "./components/Locations/LocationsDetails/LocationDetails";
+import EpisodesDetails from "./components/Episodes/EpisodesDetails/EpisodesDetails";
 import { MyProvider } from "./components/Context/Context";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="location/:id" element={<LocationDetails/>}/>
           <Route path="episode" element={<Episodes />} />
           <Route path="location" element={<Locations />} />
+          <Route path="episode/:id" element={<EpisodesDetails/>}/>
         </Route>
       </Routes>
     </MyProvider>

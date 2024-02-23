@@ -45,3 +45,18 @@
     color: #2196F3;
     text-transform: uppercase;
   }
+
+
+  .main-locations__button:hover{
+    background-color: #81bce7;
+  }
+  
+  .main-locations__button:active{
+    background-color: #579ed0;
+  }
+
+  @media(max-width: 1019px){
+    .main-locations__contant-wrapper{
+      justify-content: center;
+    }
+  }

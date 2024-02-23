@@ -53,3 +53,9 @@
     font-size: 14x;
     color: #6E798C; 
 }
+
+.main-location-details__card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

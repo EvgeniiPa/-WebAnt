@@ -1,0 +1,31 @@
+.main-character-details__episode-cart{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #6e798c;
+}
+
+.main-character-details__episode{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #081f32;
+}
+
+.main-character-details__episode-name{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6e798c;
+
+}
+
+.main-character-details__episode-date{
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: Medium;
+    text-transform: uppercase;
+    color: #6e798c;
+
+}

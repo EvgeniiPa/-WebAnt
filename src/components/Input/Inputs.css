@@ -6,6 +6,10 @@
     border:1px solid black;
 }
 
+.input__wrapper:hover{
+    border: 2px solid green;
+}
+
 .input__img{
     width:24px;
     margin-right: -24px;
@@ -19,5 +23,15 @@
 }
 
 .input__serch:focus{
-    border: none;
+  background-color: rgb(106, 231, 110);
+}
+
+@media (max-width: 480px){
+    .input__wrapper{
+        margin: 0 auto;
+    }
+
+    .input__wrapper{
+        width:95%;
+    }
 }

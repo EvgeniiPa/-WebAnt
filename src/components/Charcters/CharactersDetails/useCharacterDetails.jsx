@@ -18,6 +18,7 @@ export function useCharacterDetails(){
         })
        .catch(error=> console.log(error))
     }
+    
 
     const loadEpisodes = () => {
       if(character ===undefined){

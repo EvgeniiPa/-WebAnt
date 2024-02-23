@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,useEffect } from "react";
 import Logo from "./Lokation.svg";
 import Iinputs from "../Input/Inputs"; 
 import "./Locations.css"
@@ -11,13 +11,28 @@ import LocationCard from "./LocationCard/LocationCard";
 
 export default function Locations(){
     const [pageCount, setPageCount] = useState(2)
-    const {locationList, setLocationList, episodeList, setEpisodeist} = useContext(MyContext)
+    const {locationList, setLocationList, locationEpisode, setLocationEpisode} = useContext(MyContext)
     const navigate = useNavigate();
 
     function handlerClickCart(id){
+      setLocationEpisode(locationList[id-1].residents)
       navigate(`/location/${id}`)
-      setEpisodeist(locationList[id - 1])
     }
+
+    useEffect(()=>{
+      reloadPage()
+    }, [])
+
+
+
+    function reloadPage(){
+      axios
+      .get("https://rickandmortyapi.com/api/location")
+      .then(res =>{ 
+        setLocationList(res.data.results)
+      })
+      .catch(error => console.error(error))
+  }
 
     function handleClickButton(){
       axios.get(`https://rickandmortyapi.com/api/location/?page=${pageCount}`)
@@ -36,7 +51,7 @@ export default function Locations(){
            <Select placeholder={'Dimension'}/>
         </div>
         <div className="main-locations__contant-wrapper">
-            {locationList.map((item)=>{
+             {locationList.map((item)=>{
               return  <LocationCard id={item.id} name={item.name} type={item.type} key={item.created} onClick={()=>handlerClickCart(item.id)}/>
             })}
         </div>

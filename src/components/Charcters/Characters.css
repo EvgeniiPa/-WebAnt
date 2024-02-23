@@ -4,6 +4,7 @@
   align-items: center;
   margin-top: 16px 0px;
   max-width: 1020px;
+  min-width: 360px;
   margin: 0 auto;
 }
 
@@ -14,15 +15,29 @@
   margin-bottom: 50px;
 }
 
+.main__logo-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__logotipe{
+  width: 59%;
+}
+
 .main__contant-cart{
   margin-bottom:26px;
   width: 240px;
   border-radius: 5px;
 }
 
+.main__contant-cart:hover{
+  border: 2px solid green;
+}
+
 .main__contant-img{
   background-position: center;
-  width: 238px;
+  width: 236px;
   max-height: 168px;
   border-radius: 5px;
 }
@@ -46,4 +61,21 @@
   font-weight: medium;
   color: #2196F3;
   text-transform: uppercase;
+}
+
+.main__button-container:hover{
+  background-color: #81bce7;
+}
+
+.main__button-container:active{
+  background-color: #579ed0;
+}
+
+
+
+@media (max-width: 1019px){
+  .main__contant-container{
+    justify-content: center;
+  }
+
 }

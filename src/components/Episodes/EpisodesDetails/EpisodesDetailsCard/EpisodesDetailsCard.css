@@ -1,0 +1,25 @@
+.episode-details-card{
+    margin-bottom: 26px;
+    width: 240px;
+    border-radius: 5px;
+}
+
+.episode-details-card__img{
+    background-position: center;
+    width: 236px;
+    max-height: 168px;
+    border-radius: 5px
+}
+
+.episode-details-card___name{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+.episode-details-card___species{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9f9c9c;
+}

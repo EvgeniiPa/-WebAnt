@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Logo from "./RickAndMorty.svg";
 import Selects from "../Selects/Selects";
 import "./Characters.css";
@@ -29,7 +29,7 @@ export default function Characters() {
   return (
     <main className="main">
       <div className="main__logo-container">
-        <img src={Logo} alt="Logotipe" />
+        <img className="main__logotipe" src={Logo} alt="Logotipe" />
       </div>
       <Selects/>
       <div className="main__contant-container">
